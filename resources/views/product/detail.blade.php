@@ -8,7 +8,7 @@
     <title>Detail product</title>
 </head>
 <body>
-    <a href="{{ route('logout') }}"><button class="btn-add">Logout</button>
+
     <a href="{{ route('product.list') }}"><button class="btn-add">Kembali</button></a>
     <form method="post" enctype="multipart/form-data" action="{{ route('product.update', $product->id) }}">
         @method("put")
@@ -18,7 +18,7 @@
 
         <label>Foto :</label><br>
         <img src="{{ Storage::url($product->foto) }}" style="width:250px; height:250px;"><br>
-        <inputtype="file" name="gambar" accept="image/*" ><br>
+        <input type="file" name="gambar" accept="image/*" ><br>
 
         <label for="deskripsi">Deskripsi :</label>
         <input type="deskripsi" name="deskripsi" id="deskripsi" value="{{ $product->deskripsi }}"><br>

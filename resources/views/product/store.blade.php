@@ -8,7 +8,7 @@
     <title>Tambah Product</title>
 </head>
 <body>
-    <a href="{{ route('logout') }}"><button class="btn-add">Logout</button>
+
     <a href="{{ route('product.list') }}"><button class="btn-add">Kembali</button></a>
     <form
         method="POST"

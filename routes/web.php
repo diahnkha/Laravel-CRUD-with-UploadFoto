@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -17,7 +18,8 @@ use App\Http\Controllers\AuthController;
 
 
 // Route::get("/", [ProductController::class, "index"])->name("homepage")->middleware(["withauth"]);
-Route::get("/", [ProductController::class, "index"])->name("list");
+// Route::get("/", [ProductController::class, "index"])->name("list");
+
 
 Route::prefix("product")->group(function(){
     Route::get("/list", [ProductController::class, "index"])->name("product.list");
@@ -29,10 +31,24 @@ Route::prefix("product")->group(function(){
     Route::get("/destroy/{id}", [ProductController::class, "destroy"])->name("product.destroy");
 });
 
+Route::prefix("blog")->group(function(){
+    Route::get("/detaillengkap", [blogController::class, "index"])->name("blog.detaillengkap");
+    Route::get("/listlengkap", [blogController::class, "detaillengkap"])->name("blog.detaillengkap");
+    Route::get("/detail/{id}", [blogController::class, "detail"])->name("blog.detail");
+    Route::get("/listdetail/{id}", [blogController::class, "listdetail"])->name("blog.listdetail");
+    Route::any('/store', [blogController::class, "store"])->name("blog.store");
 
-// // Route::get('/', function(){
-// //     return view('welcome');
+    Route::post("/create", [blogController::class, "create"])->name("blog.create");
+    Route::put("/update/{id}", [blogController::class, "update"])->name("blog.update");
+    Route::get("/destroy/{id}", [blogController::class, "destroy"])->name("blog.destroy");
+});
 
-// // })->name("homepage")->middleware(["withauth"]);;
+// Route::get('/', function(){
+//     return view('landing');
+
+    Route::get('/', function(){
+        return view('blog.detaillengkap');
+
+})->name("home");
 // Route::any("/login", [AuthController::class, "login"])->name("login")->middleware(["noauth"]);
 // Route::any("/logout", [AuthController::class, "logout"])->name("logout")->middleware(["withauth"]);

@@ -10,7 +10,7 @@
 <body>
     <div class="menu">
         <h1> <a href="{{ route('product.list') }}">Product</a></h1>
-        <h1> <a href="#">Blog</a></h1>
+        <h1> <a href="{{ route('blog.detaillengkap') }}">Blog</a></h1>
     </div>
 </body>
 </html>

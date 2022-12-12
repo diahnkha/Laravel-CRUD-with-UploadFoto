@@ -47,7 +47,7 @@ Route::prefix("blog")->group(function(){
 //     return view('landing');
 
     Route::get('/', function(){
-        return view('blog.detaillengkap');
+        return view('landing');
 
 })->name("home");
 // Route::any("/login", [AuthController::class, "login"])->name("login")->middleware(["noauth"]);

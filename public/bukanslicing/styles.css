@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
@@ -265,7 +265,7 @@ body{
 
 #blog-big .card-blog{
     width: 1144px;
-    height: 296px;
+    height: auto;
     padding: 50px 50px;
     background: #FFFFFF;
     /* --c-border */
@@ -277,17 +277,21 @@ body{
 
 }
 
+#blog-big .avg-list a{
+    font-size: 20px;
+}
+
 #blog-big .card-blog .image{
     background: #E5F4FF;
     border-radius: 5px;
     width: 330px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
 }
 
 #blog-big .card-blog img{
     width: 300px;
-    height: 270px;
+    height: 370px;
     display: block;
     margin: 0 auto;
 }
@@ -301,7 +305,7 @@ body{
     font-family: 'SF Pro Text';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+
     line-height: 21px;
     display: flex;
     align-items: center;
@@ -315,8 +319,6 @@ body{
     font-family: 'SF Pro Text';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
     display: flex;
     align-items: center;
 
